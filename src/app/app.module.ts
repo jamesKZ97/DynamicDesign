@@ -1,18 +1,16 @@
+import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpModule, JsonpModule } from '@angular/http';
+import { HttpModule }    from '@angular/http';
+import { AppRoutingModule } from './app-routing.module';
+import { DarkNavbarComponent } from './dark-navbar/dark-navbar.component';
+import { LightNavbarComponent } from './light-navbar/light-navbar.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  imports:      [ BrowserModule, HttpModule, JsonpModule, HttpModule, AppRoutingModule ],
+  declarations: [ AppComponent, DarkNavbarComponent, LightNavbarComponent],
+  bootstrap:    [ AppComponent]
 })
 export class AppModule { }
+
